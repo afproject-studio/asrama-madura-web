@@ -1,0 +1,51 @@
+
+/* === Card Styling === */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #1d3557;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+/* === Container Spacing === */
+.container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+/* === Responsive Columns === */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 160px;
+    }
+}

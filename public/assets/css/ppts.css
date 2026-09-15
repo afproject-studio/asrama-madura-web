@@ -1,0 +1,63 @@
+/* Container PPTS */
+.ppts-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Card PPTS */
+.ppts-card {
+    overflow: hidden;
+    background-color: transparent;
+    border: none !important;
+    box-shadow: none !important; 
+}
+/* Foto PPTS full lebar */
+.ppts-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: transparent; /* hilangkan background abu-abu */
+    padding: 20px;
+    object-fit: contain;
+    border: none; /* pastikan tidak ada border */
+    border-radius: 0; /* lurus tanpa lengkungan */
+}
+
+
+/* Body Card */
+.ppts-card .card-body {
+    padding: 20px;
+}
+
+.ppts-card img {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.ppts-card .card-title {
+    font-size: 1.4rem;
+    color: #8B0000; /* warna khas web */
+    font-weight: 600;
+}
+
+.ppts-card .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify; /* Rata kanan kiri */
+}
+
+/* Tanggal update */
+.ppts-card .update-date {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Alert jika kosong */
+.ppts-empty {
+    text-align: center;
+    padding: 40px;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+}

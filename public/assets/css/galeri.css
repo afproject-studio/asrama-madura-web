@@ -1,0 +1,209 @@
+/* ===== GALERI BOOTSTRAP 5 - LAYOUT KONSISTEN ===== */
+.galeri-container {
+    padding: 60px 20px;
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.galeri-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #800000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.galeri-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #800000;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 3px;
+}
+
+/* Grid layout dengan Bootstrap 5 */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card galeri */
+.galeri-card {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.galeri-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.galeri-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay */
+.galeri-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: #fff;
+    padding: 15px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.galeri-card:hover .galeri-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.galeri-overlay h5 {
+    margin: 0 0 5px;
+    font-weight: 600;
+}
+
+.galeri-overlay p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ===== ADMIN GALERI MODERN - SERAGAM DENGAN BERITA ===== */
+.admin-galeri-section {
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 60px;
+}
+
+.admin-galeri-title {
+    font-weight: 700;
+    color: #5b1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.btn-grad {
+    background: linear-gradient(135deg, #7a2a2a, #a33a3a);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-grad:hover {
+    background: linear-gradient(135deg, #5b1a1a, #7a2a2a);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* Tabel admin galeri */
+.admin-galeri-table {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.admin-galeri-table thead th {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.admin-galeri-table tbody tr {
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.admin-galeri-table tbody tr:hover {
+    background: #fceaea;
+    box-shadow: 0 4px 15px rgba(122, 42, 42, 0.2);
+}
+
+/* Foto tabel seragam */
+.admin-galeri-thumb {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.admin-galeri-thumb:hover {
+    transform: scale(1.1);
+}
+
+/* Tombol edit/hapus */
+.btn-edit {
+    background: #7a2a2a;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-edit:hover {
+    background: #5b1a1a;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.btn-delete {
+    background: #c03939;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-delete:hover {
+    background: #8e2b2b;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-galeri-thumb {
+        width: 70px;
+        height: 50px;
+    }
+
+    .btn-edit, .btn-delete {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .galeri-card img {
+        height: 180px;
+    }
+}

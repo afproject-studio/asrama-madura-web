@@ -1,0 +1,169 @@
+.heading-kontak {
+  color: #8B0000;
+  margin-top: 3rem;
+  font-weight: 800;
+  font-size: 2.2rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem; /* tambah jarak bawah lebih besar */
+}
+
+
+.heading-kontak::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #8B0000;
+  margin: 0.6rem auto 0;
+  border-radius: 5px;
+}
+
+/* Subjudul */
+.subheading-kontak {
+  color: #8B0000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* Kartu kontak & peta */
+/* DIUBAH: Hilangkan border-radius dan shadow, agar tidak seperti box */
+.card {
+  border: none;
+  border-radius: 0; /* hilangkan rounding */
+  box-shadow: none; /* hilangkan shadow */
+  transition: none; /* hilangkan efek hover */
+  height: auto; /* tidak full tinggi */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hilangkan efek hover */
+.card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Teks isi kontak */
+/* DIUBAH: Kurangi padding kanan supaya lebih rapat */
+.card-body {
+  padding: 1rem 1rem 1rem 0; /* padding kanan dihilangkan */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-body p {
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+/* Link email */
+.card-body a[href^="mailto:"] {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card-body a[href^="mailto:"]:hover {
+  text-decoration: underline;
+}
+
+/* Link media sosial */
+.facebook-link,
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+  margin: 4px 0;
+}
+
+/* Facebook style */
+.facebook-link {
+  background-color: #3b5998;
+}
+
+.facebook-link:hover {
+  background-color: #2d4373;
+  transform: scale(1.03);
+}
+
+/* Instagram style */
+.instagram-link {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.instagram-link:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* Buat kolom row supaya isi kolom stretch sama tinggi dan berjajar */
+/* DIUBAH: Beri padding kiri dan kanan agar tidak menempel ke tepi */
+/* Tetap flex-wrap: nowrap supaya berdampingan */
+.row.gx-4.gy-4.align-items-stretch {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: flex-start; /* rata atas supaya natural */
+}
+
+/* Setiap kolom agar fleksibel dan isi card bisa full */
+.row.gx-4.gy-4.align-items-stretch > div {
+  flex: 1;
+  display: flex;
+}
+
+/* Set card agar flex column dan full tinggi */
+.row.gx-4.gy-4.align-items-stretch > div > .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kontainer iframe map supaya memenuhi card */
+/* DIUBAH: Hilangkan border-radius dan beri margin kiri agar ada jarak */
+/* Batasi lebar container supaya lebih center */
+.kontak-container {
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .heading-kontak {
+    font-size: 1.8rem;
+  }
+
+  .subheading-kontak {
+    font-size: 1rem;
+  }
+
+  .facebook-link,
+  .instagram-link {
+    font-size: 0.95rem;
+    padding: 5px 10px;
+  }
+
+  /* Untuk layar kecil kolom jadi vertikal */
+  .row.gx-4.gy-4.align-items-stretch {
+    flex-wrap: wrap;
+  }
+  .row.gx-4.gy-4.align-items-stretch > div {
+    flex: 100% !important;
+  }
+}

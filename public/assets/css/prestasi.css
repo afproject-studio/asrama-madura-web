@@ -1,0 +1,269 @@
+/* Container utama halaman Prestasi Siswa */
+.pres {
+    max-width: 1100px;
+    margin: 60px auto 80px;
+    padding: 50px 40px;
+    background: linear-gradient(145deg, #fffafa, #f8e9e9);
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 20px 40px rgba(128, 0, 0, 0.15);
+    animation: prestasiFadeUp 0.8s ease-out;
+}
+
+/* Judul utama */
+.dashboard-title {
+    color: #7b0000;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin-bottom: 55px;
+    text-shadow: 2px 2px 6px rgba(123, 0, 0, 0.3);
+    animation: prestasiFadeDown 0.8s ease-out;
+}
+
+/* Grid daftar prestasi */
+.berita-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+}
+
+/* Item setiap prestasi */
+.berita-item {
+    background: #ffffffcc;
+    border-radius: 18px;
+    width: 300px;
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.07),
+        inset 0 0 12px rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s ease,
+                background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: prestasiCardFade 0.6s ease forwards;
+    border: 1px solid #ddb4b4;
+}
+
+.berita-item:nth-child(1) { animation-delay: 0.15s; }
+.berita-item:nth-child(2) { animation-delay: 0.3s; }
+.berita-item:nth-child(3) { animation-delay: 0.45s; }
+/* Tambahkan delay untuk item berikutnya jika perlu */
+
+.berita-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:
+        0 20px 40px rgba(123, 0, 0, 0.25),
+        inset 0 0 15px rgba(255, 255, 255, 0.6);
+    background-color: #fff0f0;
+}
+
+/* Overlay efek saat hover gambar */
+.berita-item:hover::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(128,0,0,0.15), rgba(255,255,255,0));
+    pointer-events: none;
+    border-radius: 18px;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+
+.berita-item::before {
+    opacity: 0;
+}
+
+/* Gambar prestasi */
+.berita-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-bottom: 1.5px solid #ddb4b4;
+    transition: transform 0.5s ease;
+    border-radius: 18px 18px 0 0;
+}
+
+.berita-item:hover img {
+    transform: scale(1.12);
+}
+
+/* Tanggal prestasi */
+.tanggal {
+    font-size: 14px;
+    color: #a66b6b;
+    margin: 14px 20px 8px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* Deskripsi singkat */
+.preview {
+    padding: 0 20px 28px;
+    font-size: 15.5px;
+    color: #5c3b3b;
+    line-height: 1.7;
+    min-height: 70px;
+    font-weight: 500;
+}
+
+/* === CSS admin form edit prestasi === */
+.prestasi-container-admin {
+    max-width: 750px;
+    margin: 60px auto;
+    background: linear-gradient(135deg, #fff5f5, #ffeaea);
+    border-radius: 20px;
+    padding: 45px 35px;
+    box-shadow: 0 18px 38px rgba(128, 0, 0, 0.12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: prestasiFadeUp 0.8s ease-out;
+}
+
+.prestasi-container-admin h1 {
+    text-align: center;
+    color: #7b0000;
+    margin-bottom: 45px;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-shadow: 2px 2px 8px rgba(123, 0, 0, 0.25);
+}
+
+.prestasi-container-admin form p {
+    margin-bottom: 22px;
+}
+
+.prestasi-container-admin form label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+    color: #4e2a2a;
+    font-size: 1.05rem;
+}
+
+.prestasi-container-admin form input[type="text"],
+.prestasi-container-admin form input[type="date"],
+.prestasi-container-admin form input[type="file"],
+.prestasi-container-admin form textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid #d1a5a5;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    box-sizing: border-box;
+    background-color: #fff7f7;
+}
+
+.prestasi-container-admin form input:focus,
+.prestasi-container-admin form textarea:focus {
+    outline: none;
+    border-color: #7b0000;
+    box-shadow: 0 0 12px rgba(123, 0, 0, 0.4);
+}
+
+.prestasi-container-admin form textarea {
+    resize: vertical;
+    min-height: 140px;
+    font-weight: 500;
+    color: #4e2a2a;
+}
+
+.prestasi-container-admin form img {
+    max-width: 220px;
+    border-radius: 14px;
+    margin-top: 12px;
+    display: block;
+    box-shadow: 0 6px 16px rgba(123, 0, 0, 0.1);
+}
+
+.prestasi-container-admin form button {
+    background: linear-gradient(135deg, #800000, #b32222);
+    color: #fff;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.25s ease;
+    display: inline-block;
+    margin-top: 15px;
+    box-shadow: 0 6px 18px rgba(179, 34, 34, 0.45);
+}
+
+.prestasi-container-admin form button:hover {
+    background: linear-gradient(135deg, #b32222, #800000);
+    transform: scale(1.07);
+    box-shadow: 0 10px 28px rgba(179, 34, 34, 0.65);
+}
+
+.prestasi-container-admin form a {
+    margin-left: 22px;
+    color: #7b0000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    vertical-align: middle;
+    transition: color 0.4s ease, text-decoration 0.4s ease;
+}
+
+.prestasi-container-admin form a:hover {
+    color: #b32222;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes prestasiFadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes prestasiFadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes prestasiCardFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .berita-grid {
+        gap: 25px;
+    }
+    .berita-item {
+        width: 100%;
+        max-width: 95%;
+    }
+    .pres {
+        padding: 35px 25px;
+        margin: 35px 20px 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .prestasi-container-admin {
+        padding: 30px 25px;
+        margin: 30px 20px;
+    }
+
+    .prestasi-container-admin h1 {
+        font-size: 2rem;
+    }
+
+    .prestasi-container-admin form button,
+    .prestasi-container-admin form a {
+        font-size: 1rem;
+        padding: 12px 26px;
+    }
+}

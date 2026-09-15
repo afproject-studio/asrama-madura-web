@@ -1,0 +1,137 @@
+/* Layout wrapper */
+#wrapper {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+#sidebar-wrapper {
+  width: 250px;
+  min-height: 100vh;
+  background: #1e1e2f;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+#sidebar-wrapper .sidebar-heading {
+  background: #111122;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem;
+  color: #fff;
+}
+#sidebar-wrapper .list-group-item {
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 0.9rem 1.2rem;
+  transition: all 0.3s ease;
+}
+#sidebar-wrapper .list-group-item:hover {
+  background: #29293d;
+  transform: translateX(4px);
+}
+
+/* Content wrapper */
+#page-content-wrapper {
+  flex: 1;
+  width: calc(100% - 250px);
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+/* Sidebar collapsed */
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: -250px;
+}
+#wrapper.toggled #page-content-wrapper {
+  width: 100%;
+}
+
+/* Navbar khusus admin */
+.admin-navbar {
+  background: #111122 !important;
+  z-index: 1050;
+  padding: 0.8rem 1rem;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+.dashboard-card .card-body p {
+  margin: 0;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary { background: linear-gradient(135deg, #007bff, #0056b3); }
+.bg-gradient-warning { background: linear-gradient(135deg, #ffc107, #ff9800); }
+.bg-gradient-success { background: linear-gradient(135deg, #28a745, #1e7e34); }
+.bg-gradient-danger  { background: linear-gradient(135deg, #dc3545, #a71d2a); }
+
+/* Table style */
+.table thead {
+  font-weight: bold;
+}
+.table-hover tbody tr:hover {
+  background-color: rgba(200,200,200,0.1);
+  cursor: pointer;
+}
+
+/* ========================================= */
+/* RESPONSIVE SECTION */
+/* ========================================= */
+
+/* Tablet & Mobile (<= 991px) */
+@media (max-width: 991px) {
+  /* Sidebar auto hide */
+  #sidebar-wrapper {
+    margin-left: -250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+  }
+
+  /* Page content full width */
+  #page-content-wrapper {
+    width: 100%;
+  }
+
+  /* Show sidebar when toggled */
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  /* Navbar fix */
+  .admin-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+  }
+
+  /* Cards stack */
+  .dashboard-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Mobile small (<= 576px) */
+@media (max-width: 576px) {
+  .dashboard-card .card-body h4 {
+    font-size: 20px;
+  }
+  .dashboard-card .card-body i {
+    font-size: 1.5rem;
+  }
+  .table {
+    font-size: 0.85rem;
+  }
+}
