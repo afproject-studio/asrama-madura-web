@@ -8,41 +8,40 @@ Project ini dikembangkan menggunakan framework **CodeIgniter 4** dan database **
 
 ## Preview Aplikasi
 
-### Halaman Login
+### Halaman Login Admin
+![Halaman Login Admin](docs/images/login-admin.png)
 
-![Halaman Login](docs/images/login.png)
+### Dashboard Admin
+![Dashboard Admin](docs/images/dashboard-admin(1).png)
 
-### Dashboard
+### Data Penghuni Asrama
+![Data Penghuni Asrama](docs/images/data-penghuni.png)
 
-![Dashboard](docs/images/dashboard.png)
+### Struktur Pengurus Asrama
+![Struktur Pengurus Asrama](docs/images/struktur-pengurus.png)
 
-### Halaman Penghuni
+### Kegiatan Asrama
+![Kegiatan Asrama](docs/images/kegiatan-asrama.png)
 
-![Halaman Penghuni](docs/images/penghuni.png)
-
-### Halaman Pengurus
-
-![Halaman Pengurus](docs/images/pengurus.png)
-
-### Halaman Kemahasiswaan
-
-![Halaman Kemahasiswaan](docs/images/kemahasiswaan.png)
-
-### Halaman Berita
-
-![Halaman Berita](docs/images/berita.png)
+### Berita Asrama
+![Berita Asrama](docs/images/berita-asrama.png)
 
 ---
 
 ## Fitur Utama
 
-- Login pengguna
-- Dashboard
+- Login admin
+- Dashboard admin
 - Manajemen data penghuni
 - Manajemen data pengurus
-- Manajemen data kemahasiswaan
-- Pengelolaan informasi dan berita
-- Pengelolaan data asrama
+- Manajemen kamar
+- Manajemen kegiatan asrama
+- Manajemen prestasi
+- Manajemen berita
+- Informasi kampus
+- Informasi kamar
+- Profil asrama
+- Pencarian data penghuni
 - Logout
 
 ---
@@ -70,6 +69,12 @@ asramamadura/
 ├── writable/
 ├── docs/
 │   └── images/
+│       ├── login-admin.png
+│       ├── dashboard-admin(1).png
+│       ├── data-penghuni.png
+│       ├── struktur-pengurus.png
+│       ├── kegiatan-asrama.png
+│       └── berita-asrama.png
 ├── asramamadura.sql
 ├── composer.json
 ├── README.md
